@@ -11,10 +11,15 @@ __pycache__/
 
 # Environment variables
 .env
+.env.*
 
 # Data
 data/raw/*
 data/processed/*
+
+# Power BI temporary files
+*.pbit
+~$*.pbix
 
 # VS Code
 .vscode/
