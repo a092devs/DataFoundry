@@ -26,6 +26,8 @@ Some of the questions I wanted to answer were:
 
 The final analysis was put together in Power BI.
 
+![DataFoundry Power BI Dashboard](reports/dashboard_preview.png)
+
 ### Main metrics
 
 | Metric | Value |
