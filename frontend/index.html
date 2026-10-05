@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10231f" />
+    <meta name="description" content="Upload, validate, and explore structured business data." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      (() => {
+        let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        try {
+          const savedTheme = localStorage.getItem("datafoundry-theme");
+          if (savedTheme === "dark" || savedTheme === "light") theme = savedTheme;
+        } catch {}
+        document.documentElement.dataset.theme = theme;
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute("content", theme === "dark" ? "#11101b" : "#f7f6fb");
+      })();
+    </script>
+    <style>
+      html {
+        min-height: 100%;
+        background: #f7f6fb;
+      }
+      html[data-theme="dark"] {
+        background: #11101b;
+      }
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        background: inherit;
+      }
+    </style>
+    <title>DataFoundry | Data workspace</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
